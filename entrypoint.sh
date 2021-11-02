@@ -40,7 +40,6 @@ function updateRepo() {
 	echo "Update mirror"
 	echo "...Fetching updates"
 	git -C "mirror" remote update
-	git -C "mirror" fetch --tags hg::tags: tag "*" # not sure if required
 	echo "...Pushing changes"
 	git -C "mirror" push --mirror "$GIT_URL"
 	echo
